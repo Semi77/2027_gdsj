@@ -1,0 +1,45 @@
+# Python 环境与缓存
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# 构建输出和本地记录
+build/
+dist/
+output/
+tmp/
+outcome/
+robot_console/firmware/
+robot_console/logs/
+*.log
+*.zip
+
+# Keil 编译产物与个人窗口状态
+10.8/MDK-ARM/WHEELTEC/
+*.o
+*.d
+*.crf
+*.axf
+*.hex
+*.map
+*.lnp
+*.dep
+*.lst
+*.Bak
+*.uvguix.*
+
+# ROS 工作区构建输出
+install/
+log/
+
+# 本机认证与环境文件
+.env
+.env.*
+!.env.example
+.Xauthority
+*.pem
+*.key
+id_rsa*
+id_ed25519*

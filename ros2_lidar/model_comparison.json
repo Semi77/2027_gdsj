@@ -1,0 +1,255 @@
+{
+  "capture": "tmp\\lidar_references\\gpio15_capture.bin",
+  "bytes": 17512,
+  "models": [
+    {
+      "model": "3irobotix Delta-2A",
+      "default_baud": 115200,
+      "packets": 0,
+      "samples": 0,
+      "valid_points": 0,
+      "range_mm": [],
+      "error": null
+    },
+    {
+      "model": "3irobotix Delta-2B",
+      "default_baud": 230400,
+      "packets": 0,
+      "samples": 0,
+      "valid_points": 0,
+      "range_mm": [],
+      "error": null
+    },
+    {
+      "model": "3irobotix Delta-2C PRO",
+      "default_baud": 115200,
+      "packets": 0,
+      "samples": 0,
+      "valid_points": 0,
+      "range_mm": [],
+      "error": null
+    },
+    {
+      "model": "3irobotix Delta-2D",
+      "default_baud": 115200,
+      "packets": 0,
+      "samples": 0,
+      "valid_points": 0,
+      "range_mm": [],
+      "error": null
+    },
+    {
+      "model": "3irobotix Delta-2G",
+      "default_baud": 115200,
+      "packets": 0,
+      "samples": 0,
+      "valid_points": 0,
+      "range_mm": [],
+      "error": null
+    },
+    {
+      "model": "COIN-D4A",
+      "default_baud": 115200,
+      "packets": 0,
+      "samples": 0,
+      "valid_points": 0,
+      "range_mm": [],
+      "error": null
+    },
+    {
+      "model": "Camsense X1",
+      "default_baud": 115200,
+      "packets": 0,
+      "samples": 0,
+      "valid_points": 0,
+      "range_mm": [],
+      "error": null
+    },
+    {
+      "model": "Hitachi-LG HLS-LFCD2",
+      "default_baud": 230400,
+      "packets": 0,
+      "samples": 0,
+      "valid_points": 0,
+      "range_mm": [],
+      "error": null
+    },
+    {
+      "model": "LDROBOT LD06",
+      "default_baud": 230400,
+      "packets": 0,
+      "samples": 0,
+      "valid_points": 0,
+      "range_mm": [],
+      "error": null
+    },
+    {
+      "model": "LDROBOT LD14P",
+      "default_baud": 230400,
+      "packets": 0,
+      "samples": 0,
+      "valid_points": 0,
+      "range_mm": [],
+      "error": null
+    },
+    {
+      "model": "LDROBOT LD19",
+      "default_baud": 230400,
+      "packets": 0,
+      "samples": 0,
+      "valid_points": 0,
+      "range_mm": [],
+      "error": null
+    },
+    {
+      "model": "LDROBOT STL19P",
+      "default_baud": 230400,
+      "packets": 0,
+      "samples": 0,
+      "valid_points": 0,
+      "range_mm": [],
+      "error": null
+    },
+    {
+      "model": "LDS08RR",
+      "default_baud": 115200,
+      "packets": 0,
+      "samples": 0,
+      "valid_points": 0,
+      "range_mm": [],
+      "error": null
+    },
+    {
+      "model": "LDS08RR (Camsense protocol)",
+      "default_baud": 115200,
+      "packets": 0,
+      "samples": 0,
+      "valid_points": 0,
+      "range_mm": [],
+      "error": null
+    },
+    {
+      "model": "Neato XV11",
+      "default_baud": 115200,
+      "packets": 0,
+      "samples": 0,
+      "valid_points": 0,
+      "range_mm": [],
+      "error": null
+    },
+    {
+      "model": "RPLIDAR A1",
+      "default_baud": 115200,
+      "packets": 0,
+      "samples": 0,
+      "valid_points": 0,
+      "range_mm": [],
+      "error": null
+    },
+    {
+      "model": "RPLIDAR C1",
+      "default_baud": 460800,
+      "packets": 0,
+      "samples": 0,
+      "valid_points": 0,
+      "range_mm": [],
+      "error": null
+    },
+    {
+      "model": "Xiaomi LDS01RR",
+      "default_baud": 115200,
+      "packets": 0,
+      "samples": 0,
+      "valid_points": 0,
+      "range_mm": [],
+      "error": null
+    },
+    {
+      "model": "Xiaomi LDS02RR",
+      "default_baud": 115200,
+      "packets": 0,
+      "samples": 0,
+      "valid_points": 0,
+      "range_mm": [],
+      "error": null
+    },
+    {
+      "model": "YDLIDAR SCL",
+      "default_baud": 115200,
+      "packets": 0,
+      "samples": 0,
+      "valid_points": 0,
+      "range_mm": [],
+      "error": null
+    },
+    {
+      "model": "YDLIDAR T-mini",
+      "default_baud": 230400,
+      "packets": 0,
+      "samples": 0,
+      "valid_points": 0,
+      "range_mm": [],
+      "error": null
+    },
+    {
+      "model": "YDLIDAR X2/X2L",
+      "default_baud": 115200,
+      "packets": 0,
+      "samples": 0,
+      "valid_points": 0,
+      "range_mm": [],
+      "error": null
+    },
+    {
+      "model": "YDLIDAR X3",
+      "default_baud": 115200,
+      "packets": 0,
+      "samples": 0,
+      "valid_points": 0,
+      "range_mm": [],
+      "error": null
+    },
+    {
+      "model": "YDLIDAR X3 PRO",
+      "default_baud": 115200,
+      "packets": 0,
+      "samples": 0,
+      "valid_points": 0,
+      "range_mm": [],
+      "error": null
+    },
+    {
+      "model": "YDLIDAR X4",
+      "default_baud": 128000,
+      "packets": 0,
+      "samples": 0,
+      "valid_points": 0,
+      "range_mm": [],
+      "error": null
+    },
+    {
+      "model": "YDLIDAR X4 PRO",
+      "default_baud": 128000,
+      "packets": 0,
+      "samples": 0,
+      "valid_points": 0,
+      "range_mm": [],
+      "error": null
+    }
+  ],
+  "strict_delta2c": {
+    "frames": 1592,
+    "speed_frames": 1592,
+    "measurement_frames": 0,
+    "checksum_errors": 0,
+    "versions": {
+      "0x13": 1592
+    },
+    "hz_min_max": [
+      8.15,
+      8.35
+    ],
+    "valid_points": 0,
+    "range_m": []
+  }
+}

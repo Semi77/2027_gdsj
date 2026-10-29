@@ -1,0 +1,18 @@
+chassis_controller:
+  ros__parameters:
+    kp: 0.010
+    ki: 0.0
+    kd: 0.002
+    max_wz: 0.08
+    track: 0.130
+    yaw_enabled: true
+    port: /dev/ttyAMA3
+    auto_open: false
+    wheel_diameter: 0.048
+    counts_per_rev: 1040.0
+    yaw_source: stm32
+    external_imu_frame: base_link
+    # 确认具体PWM型号、供电和机械限位后才设true；初次不自动开启输出。
+    servo_allowed: false
+    servo_min_us: 1000
+    servo_max_us: 2000

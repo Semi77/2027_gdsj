@@ -1,0 +1,23 @@
+#!/bin/bash
+set -e
+# 将角度提交给原ROS节点，硬件输出统一经底盘节点发送到STM32 PA8。
+if [ "$#" -ne 1 ]; then echo '用法: servo-angle-set 角度(0-270)'; exit 2; fi
+python3 - "$1" <<'PY'
+import math
+import subprocess
+import sys
+
+angle = float(sys.argv[1])
+if not math.isfinite(angle) or not 0 <= angle <= 270:
+    raise SystemExit('角度必须在0到270之间')
+request = f'{{parameters: [{{name: angle_deg, value: {{type: 3, double_value: {angle}}}}}]}}'
+command = ['sudo', 'docker', 'exec', 'ros2-servo', 'bash', '-c',
+           'source /opt/ros/humble/setup.bash; ros2 service call /servo_pwm_controller/set_parameters rcl_interfaces/srv/SetParameters "$1"',
+           '_', request]
+result = subprocess.run(command, text=True, capture_output=True, timeout=15)
+print(result.stdout, end='')
+print(result.stderr, end='', file=sys.stderr)
+if result.returncode or 'successful=True' not in result.stdout:
+    raise SystemExit(1)
+print(f'已提交PA8目标角度 {angle:g}°；最终输出以底盘反馈为准')
+PY

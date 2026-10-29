@@ -1,0 +1,10 @@
+{
+  "frame": "map",
+  "width": 94,
+  "height": 96,
+  "resolution": 0.05000000074505806,
+  "occupied_cells": 170,
+  "free_cells": 1545,
+  "unknown_cells": 6649,
+  "pgm": "/workspace/ros2_ws/maps/lidar_test.pgm"
+}

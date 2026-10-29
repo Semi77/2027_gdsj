@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+# 保留原命令入口，控制PA8角度桥接节点而不直接操作树莓派PWM。
+case "$1" in
+start) sudo docker start ros2-servo >/dev/null; echo 'PA8舵机角度节点已启动';;
+stop) sudo docker stop ros2-servo >/dev/null; echo '角度节点已停止；PA8保持最后PWM';;
+status) sudo docker inspect ros2-servo --format '状态={{.State.Status}} 开机自启={{.HostConfig.RestartPolicy.Name}}'; sudo docker exec ros2-servo bash -c 'source /opt/ros/humble/setup.bash; ros2 param get /servo_pwm_controller angle_deg';;
+set) [ "$#" -eq 2 ] || { echo '用法: servo-angle set 角度(0-270)'; exit 2; }; exec /home/xu/servo-angle-set "$2";;
+*) echo '用法: servo-angle {start|stop|status|set 角度}'; exit 2;;
+esac

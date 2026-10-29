@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# @brief 在现有 Humble 容器中手动启动纯雷达建图，并在树莓派桌面显示 RViz2。
+set -euo pipefail
+
+WS="$HOME/ros2_ws"
+CONTAINER=ros2-humble
+sudo docker start "$CONTAINER" >/dev/null
+if [ -f "$HOME/.Xauthority" ]; then
+  cp -p "$HOME/.Xauthority" "$WS/.home/.Xauthority"
+fi
+
+# @brief 保留当前用户及其附加组，通过现有本地 X11 授权显示窗口。
+exec sudo docker exec -it --user 0 \
+  --env DISPLAY="${DISPLAY:-:0}" \
+  --env XAUTHORITY=/workspace/ros2_ws/.home/.Xauthority \
+  --env XAUTHLOCALHOSTNAME="$(hostname)" \
+  --env QT_QPA_PLATFORM=xcb \
+  --env QT_X11_NO_MITSHM=1 \
+  --env LIBGL_ALWAYS_SOFTWARE=1 \
+  --env HOME=/workspace/ros2_ws/.home \
+  --workdir /workspace/ros2_ws \
+  "$CONTAINER" setpriv --reuid "$(id -u)" \
+  --regid "$(getent group gpio | cut -d: -f3)" \
+  --groups "$(id -G | tr ' ' ',')" bash -lc \
+  'source /workspace/ros2_ws/install/setup.bash; exec ros2 launch /workspace/ros2_ws/lidar_support/mapping/mapping.launch.py'
